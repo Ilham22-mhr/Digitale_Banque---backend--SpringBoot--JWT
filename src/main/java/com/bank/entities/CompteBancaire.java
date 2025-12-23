@@ -37,15 +37,12 @@ public abstract class CompteBancaire  {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    // Un compte peut avoir plusieurs opérations
     @OneToMany(mappedBy = "compte", fetch = FetchType.LAZY)
     private List<Operation> operations;
 
-    // Pour la traçabilité
     private String createdBy;
     private String lastModifiedBy;
 
-    // Constructeur avec tous les paramètres
     public CompteBancaire(Long id, Date dateCreation, double solde,
                           StatCompte statut, String devise, Client client,
                           List<Operation> operations, String createdBy,
