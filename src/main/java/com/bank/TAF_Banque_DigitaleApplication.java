@@ -19,7 +19,6 @@ public class TAF_Banque_DigitaleApplication {
         System.out.println("Application Banque Digitale démarrée !");
         System.out.println("========================================");
         System.out.println("API disponible sur: http://localhost:8091/api");
-        System.out.println("🗄 Base de données: MariaDB (bankdb)");
         System.out.println("========================================\n");
     }
 
