@@ -52,7 +52,7 @@ public class TAF_Banque_DigitaleApplication {
             authorityRepository.save(new Authority("COMPTE_ACTIVATE", "Activer les comptes", adminRole));
             authorityRepository.save(new Authority("COMPTE_SUSPEND", "Suspendre les comptes", adminRole));
 
-            System.out.println("✅ ROLE_ADMIN créé avec authorities (consulter/supprimer clients, consulter/activer/suspendre comptes)");
+            System.out.println("ROLE_ADMIN créé avec authorities (consulter/supprimer clients, consulter/activer/suspendre comptes)");
 
 
             Role employeRole = roleRepository.save(new Role("ROLE_EMPLOYE"));
@@ -66,13 +66,13 @@ public class TAF_Banque_DigitaleApplication {
 
             authorityRepository.save(new Authority("OPERATION_EXECUTE", "Faire des opérations", employeRole));
 
-            System.out.println("✅ ROLE_EMPLOYE créé avec authorities");
+            System.out.println("ROLE_EMPLOYE créé avec authorities");
 
 
             Role clientRole = roleRepository.save(new Role("ROLE_CLIENT"));
 
 
-            System.out.println("✅ ROLE_CLIENT créé (aucune authority - pas d'accès admin)");
+            System.out.println("ROLE_CLIENT créé (aucune authority - pas d'accès admin)");
 
 
             User admin = new User();
@@ -82,7 +82,7 @@ public class TAF_Banque_DigitaleApplication {
             admin.setRole(adminRole);
             admin.setEnabled(true);
             userRepository.save(admin);
-            System.out.println("✅ Utilisateur admin créé");
+            System.out.println("Utilisateur admin créé");
 
             User employe = new User();
             employe.setUsername("employe");
@@ -91,7 +91,7 @@ public class TAF_Banque_DigitaleApplication {
             employe.setRole(employeRole);
             employe.setEnabled(true);
             userRepository.save(employe);
-            System.out.println("✅ Utilisateur employe créé");
+            System.out.println("Utilisateur employe créé");
 
             Client clientAhmed = new Client();
             clientAhmed.setNom("Ahmed Benali");
@@ -108,10 +108,10 @@ public class TAF_Banque_DigitaleApplication {
             clientUser.setClient(clientAhmed);
             clientUser.setEnabled(true);
             userRepository.save(clientUser);
-            System.out.println("✅ Utilisateur client ahmed créé");
+            System.out.println(" Utilisateur client ahmed créé");
 
             System.out.println("========================================");
-            System.out.println("✅ Initialisation terminée !");
+            System.out.println("Initialisation terminée !");
             System.out.println("========================================");
 
 

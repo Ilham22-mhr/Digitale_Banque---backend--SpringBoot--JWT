@@ -1,8 +1,3 @@
-// ========================================
-// FICHIER : BankService.java
-// Package : com.bank.services
-// Ce fichier contient TOUTE la logique métier
-// ========================================
 package com.bank.services;
 
 import com.bank.dtos.*;
